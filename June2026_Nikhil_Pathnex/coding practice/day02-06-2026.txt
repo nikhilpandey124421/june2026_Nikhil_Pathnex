@@ -1,0 +1,76 @@
+day 2 - service and tags
+ansible - install and enable nginx
+
+name: install and start Nginx on pathnex
+hosts:all
+become:yes
+   
+
+
+
+   tasks:
+        -name: Instal nginx
+         yum:
+         name:nginx  
+         state:present
+
+
+        -name: Enable nginx
+          service:
+          name:nginx
+          state:started
+          enabled:yes 
+           
+
+
+
+
+***** terraform - ec2 with tags
+       
+provider "aws" {
+region = "us-east-1"
+}
+
+resouce "aws_instance"
+"pathnexEC2" {
+ami  =  "      "
+instance_type = "large"
+
+tags = {
+Name = "pathnex - server"
+Environment = "training"
+owner = "pathnexStudent"
+
+}}
+
+
+
+
+
+**** shell script - disk usgae 
+
+
+
+
+#!/bin/bash
+
+df -h
+
+
+
+
+**docker****
+
+
+docker pull ubantu
+docker images
+docker ps -a
+
+
+from ubaantu:22.04
+RUN apt update
+CMD["echo" , "hello neeraj bahi"]
+
+
+
+
