@@ -1,0 +1,11 @@
+Today Task
+
+2 hours of online morning session from Neeraj , understood some important linux command and when to use thems 
+2 hours - read about the interview question of linux given by neeraj, watched neeraj linux video from previos month
+half hour -  solve homework given by neeraj differnce between public keys and private keys and type of keys
+1 hour - push the code in github
+
+tommorow task
+
+will deep dive in linux, and most probably will finish linux
+and will try to learn git
