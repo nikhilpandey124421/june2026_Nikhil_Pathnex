@@ -1,0 +1,9 @@
+3  hours of online morning session from Neeraj , understood some important linux command and when to use thems 
+2 hours - read about the interview question of linux given by neeraj, watched neeraj linux video from previos month
+2 hours - learned about git
+half  hour - push the code in github
+
+tommorow task
+
+will finish  git and  linux, will start aws	
+
