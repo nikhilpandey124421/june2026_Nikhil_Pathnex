@@ -1,0 +1,8 @@
+2  hours of online morning session from Neeraj , understood some important linux command and when to use thems 
+2 hours - completed git from previous video
+2 hours - completed aws from previous video
+half  hour - push the code in github
+
+tommorow task
+
+will finish  docker and will start k8
