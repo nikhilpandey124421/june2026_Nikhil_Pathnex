@@ -1,0 +1,71 @@
+
+
+
+
+- name: Install Docker
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install Docker
+      yum:
+         name: docker
+         state: present
+    - name: Start Docker
+      service:
+         name: docker
+         state: started
+         enabled: yes     
+
+
+
+
+resource "aws_vpc" "main" {
+  cidr_block = '10.0.0.0/16"
+}
+
+resource "aws_instance" "pathnex_ec2" {
+  ami              = "ami-0abcd1234abcd1234"
+  instance_type    = "t3.medium"
+
+  subnet_id.        = aws_subnet.main.id
+
+  tags = {
+    name = "pathnex-ec2"
+  }       
+}
+
+
+
+        apiVersion: v1
+        kind: pod
+        metadata:
+           name: pathnex-pod
+        spec:
+           containers:
+             -name: web
+             image: nginx
+             volumeMounts:
+                - mountPath: /usr/share/nginx/html
+                  name: html-volumeMounts
+            volumes:
+            - name: html-volume
+              hostpath:
+              path: /data
+              type: Directory          
+
+
+
+
+#!/bin/bash
+services=("nginx" "docker" "httpd")
+for service in "${services[@]}"
+do
+  if systemctl is-active --quiet $service; then
+    echo "$service is running"
+  else
+    echo "$service is not running"
+  fi
+done
+
+
+
